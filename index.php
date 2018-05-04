@@ -11,12 +11,4 @@ require_once('libs/config.php');
 //Session::init();
 
 
-
-
-
-
-
-
-
-
- $route = new Route;
+$route = new Route;

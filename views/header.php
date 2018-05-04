@@ -1,5 +1,3 @@
-	
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,20 +29,14 @@
         <li><a href="#">Page 3</a></li> 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-     <?php   if (!isset($_SESSION['name'])): ?>
 
-        <li><a href="<?php echo URL ?>/user/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    	<li><a href="<?php echo URL ?>/user/registration"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="<?php echo URL ?>/user/login_in"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
-      <?php else:
-       var_dump($_SESSION['id'])  ; ?>
      
-        <!-- <li><img src="<?php //echo($_SESSION['avatars']);?>" style="height: 50px; width: 60px;" alt=""></li> -->
-        <li><a href="#">Hello, <?= $_SESSION['name']; ?></a></li>
+        <li><a href="#"></a></li>
         <li><a href="<?php echo URL ?>/user/edit">Edit my profile</a></li>
         <li><a href="<?php echo URL ?>/user/sessionexit?page=logout"><span class="glyphicon glyphicon-log-out"></span> Exit</a></li>
-
-        <?php endif ?>
 
       </ul>
     </div>

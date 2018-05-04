@@ -4,7 +4,6 @@
 class View
 {
 
-	// $path - путь; $data - данные которые будут отображаться
 	static function render($path, $data)
 	{
 

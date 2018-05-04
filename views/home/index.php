@@ -5,7 +5,7 @@
 			<div><?=$data['content'] ?></div>
 		</div>
 		<div class="col-md-12">
-			<td><a href="<?= URL ?>/user/edit/<?= $data['content'][$i]['$id'] ?>"> <?php echo 'name'?></a></td>
+			<td><a href="<?= URL ?>/user/edit/<?= $data['content'][$i]['$id'] ?>"> </a></td>
 		</div>
 	</div>
 </div>
