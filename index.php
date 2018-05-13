@@ -7,8 +7,6 @@ spl_autoload_register(function($class_name){
 require_once('libs/config.php');
 
 
-
-//Session::init();
-
+Session::init();
 
 $route = new Route;
