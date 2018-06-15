@@ -23,8 +23,7 @@
     </div>	
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="<?php echo URL ?>/">Register</a></li> <!-- /register/index -->
-        <li><a href="<?php echo URL ?>/weather">Weather</a></li>
+        <li <?php if($_SERVER['REQUEST_URI'] == '/weather'){ ?> class="active" <?php } ?> ><a href="<?php echo URL ?>/weather">Weather</a></li>
         <li><a href="<?php echo URL ?>/page">Page 1</a></li>
         <li><a href="<?php echo URL ?>/home/contact">Contact</a></li> 
       </ul>
@@ -37,7 +36,10 @@
         <li><a href="#">Hello, <?= $_SESSION['name']; ?></a></li>
         <!-- <li><a href="<?php //echo URL ?>/user/edit">Edit my profile</a></li> -->
         <li><a href="<?php echo URL ?>/logout"><span class="glyphicon glyphicon-log-out"></span> Exit</a></li>
-<?php endif ?>
+<?php else : ?>
+        <li <?php if($_SERVER['REQUEST_URI'] == '/'){ ?> class="active" <?php } ?>><a href="<?php echo URL ?>/">Register</a></li> <!-- /register/index -->
+        <li <?php if($_SERVER['REQUEST_URI'] == '/login'){ ?> class="active" <?php } ?> ><a href="<?php echo URL ?>/login">Login</a></li>
+<?php endif; ?>
       </ul>
     </div>
   </div>

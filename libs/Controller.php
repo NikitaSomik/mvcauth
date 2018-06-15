@@ -8,6 +8,4 @@ abstract class Controller
 	function dump($m){
 		echo '<pre>'.print_r($m, true).'</pre>';
 	}	
-	 
-
 }

@@ -35,10 +35,34 @@ class User extends Model
 		$stmt->execute( [':email' => $email] );
 
 		if ($stmt->fetchColumn()) {
-			var_dump($stmt->fetchColumn());
+			//var_dump($stmt->fetchColumn());
 			$bool = false;
 		}
 
 		return $bool;
+	}
+
+	public function checkUser($data)
+	{
+
+		$email = $data['emailLogin'];
+		$surname = $data['surname'];
+
+		$sql_check = 'SELECT * FROM users WHERE email = :email AND surname = :surname';
+		
+		$stmt = $this->pdo->prepare($sql_check);
+		$stmt->execute([
+			':email' => $email, 
+			':surname' => $surname
+		]);
+		$res = $stmt->fetchAll();
+		
+		if ($res) {
+			return $res;
+		} else {
+			$error[] = 'These credentials do not match our records.';
+			Session::setMessage('danger', $error);
+			return false;
+		}
 	}
 }

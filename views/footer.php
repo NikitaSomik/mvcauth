@@ -22,7 +22,7 @@ var app = {
 
 			return false;
 		}
-		submitBtn.attr('disabled', 'disabled');
+		
 	},
 
 	validateForm: function (form) {
@@ -89,7 +89,7 @@ var app = {
 				}
 			}	else if (input.hasClass('birthday') && $.trim(val)) {
 
-				if ($.trim(val).substring(0,4) == date.getFullYear() || $.trim(val).substring(0,4) < 1940) {
+				if ($.trim(val).substring(0,4) == date.getFullYear() || $.trim(val).substring(0,4) < 1940 || $.trim(val).substring(0,4) > date.getFullYear() ) {
 					formGroup.removeClass('has-success').addClass('has-error');
 					input.parent().next().text('The birthday must be a valid');
 					valid = false;
@@ -130,6 +130,11 @@ app.initialize();
 
 
 
+$('thead>tr').css({'font-size': '12px'});
+$('.cltext, tbody span, .wrow>th').css({'color':'#069'});
+$('td.temp').css({'font-size': '24px', 'font-weight':'bold'}).next().next().next().css({'color':'#069', 'font-weight': 'bold','font-size': '17px'});
+$('.value.m_temp').css({'color':'#069', 'font-weight': 'bold','font-size': '17px'});
+$('.value.m_press').css({'color':'#069', 'font-weight': 'bold','font-size': '17px'});
 
 </script>
 </body>

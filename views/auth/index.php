@@ -6,7 +6,7 @@
 			<h2 class="title text-center">Register</h2>
       <?php Session::showMessage() ?>
 			<br>
-			<form id="formReg" action="<?=$_SERVER['PHP_SELF'];?>" method="POST" class="form-horizontal" role="form">
+			<form id="formReg" action="" method="POST" class="form-horizontal" role="form">
 				<div class="form-group">
     				<label for="name" class="col-sm-2 control-label">Name <span style="color: red;">*</span></label>
     				<div class="col-sm-10">
@@ -67,23 +67,6 @@
 			</form>
 
 		</div>
-		<!-- <div class="col-md-12">
-			<td><a href="<?= URL ?>/user/edit/<?= $data['content'][$i]['$id'] ?>"> </a></td>
-		</div> -->
 	</div>
 </div>
 
-<?php 
-
-// foreach ($arr as $value) {
-//   echo $value.'<br>';
-// }
-// var_dump(stripslashes($_POST['name']));
-
-
-// var_dump($arr);
-// var_dump($data);
-//echo '<pre>', print_r($_POST), '</pre>';
-echo '<pre>', print_r($arr), '</pre>';
-echo '<pre>', print_r($data), '</pre>';
-?>
